@@ -1,0 +1,1 @@
+json.array! @tur_types, partial: 'tur_types/tur_type', as: :tur_type

@@ -1,0 +1,15 @@
+
+<div class="col s4">
+  <%= link_to house do %>
+      <div class="card small hoverable z-depth-5 waves-effect waves-blue">
+        <div class="card-image">
+          <%= image_tag house.image %>
+          <span class="card-title">$<%= house.price %></span>
+        </div>
+        <div class="card-content">
+          <strong><%= house.name %></strong>
+          <p>Cuartos: <%= house.rooms %></p>
+        </div>
+      </div>
+  <% end %>
+</div>

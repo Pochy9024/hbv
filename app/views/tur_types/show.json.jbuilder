@@ -1,0 +1,1 @@
+json.partial! "tur_types/tur_type", tur_type: @tur_type

@@ -1,0 +1,69 @@
+<div>
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="align-wrapper">
+          <iframe id="forecast_embed" type="text/html" frameborder="0" height="145" width="20%" src="http://forecast.io/embed/#lat=23.1380&lon=-82.3659&name=La Habana&color=#ffffff&font=Roboto&units=ca"> </iframe>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><%= image_tag 'a.jpg' %></div>
+  </div>
+
+  <a class="z-depth-3 btn-floating btn-large waves-effect waves-light red right modal-trigger" href="#modal1"><i class="material-icons">search</i></a>
+  <!--   Icon Section   -->
+  <div  id="background">
+    <div class="container">
+
+    <div class="row ">
+
+      <% @houses.each do |houses| %>
+          <%= render 'form', :house => houses %>
+      <% end %>
+
+    </div>
+    <br><br>
+    </div>
+  </div>
+
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      <form class="col s6">
+        <div class="row">
+          <p class="label-list">Precio</p>
+          <p class="range-field">
+            <input type="range" id="test5" min="0" max="10000"/>
+          </p>
+        </div>
+        <div class="row">
+          <div class="input-field col s1">
+            <br><h6>Cuartos </h6>
+          </div>
+          <div class="input-field col s4 offset-s1">
+            <form action="#">
+              <p class="range-field">
+                <input type="range" id="test5" min="1" max="4"/>
+              </p>
+            </form>
+          </div>
+          <div class="input-field col s1">
+            <br><h6>Personas </h6>
+          </div>
+          <div class="input-field col s4 offset-s1">
+            <form action="#">
+              <p class="range-field">
+                <input type="range" id="test5" min="1" max="9"/>
+              </p>
+            </form>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+</div>
+
+
+

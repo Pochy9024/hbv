@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  its_include: false
+  frecuency: MyString
+
+two:
+  name: MyString
+  its_include: false
+  frecuency: MyString

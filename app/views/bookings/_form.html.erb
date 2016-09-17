@@ -1,0 +1,71 @@
+<%= form_for(booking) do |f| %>
+  <% if booking.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(booking.errors.count, "error") %> prohibited this booking from being saved:</h2>
+
+      <ul>
+      <% booking.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.number_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :day_in %>
+    <%= f.date_select :day_in %>
+  </div>
+
+  <div class="field">
+    <%= f.label :day_out %>
+    <%= f.date_select :day_out %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rooms %>
+    <%= f.number_field :rooms %>
+  </div>
+
+  <div class="field">
+    <%= f.label :persons %>
+    <%= f.number_field :persons %>
+  </div>
+
+  <div class="field">
+    <%= f.label :airport_taxi %>
+    <%= f.check_box :airport_taxi %>
+  </div>
+
+  <div class="field">
+    <%= f.label :specifications %>
+    <%= f.text_area :specifications %>
+  </div>
+
+    <div>
+      <%= show_simple_captcha %>
+    </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

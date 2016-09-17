@@ -1,0 +1,204 @@
+<div class="row">
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <%= render 'slide' %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+<div class="container">
+
+
+  <div class="row">
+    <div class="col s7 offset-s1">
+      <ul class="tabs">
+        <li class="tab col s6"><a href="#test1">Descipcion</a></li>
+        <li class="tab col s6"><a href="#test2">Servicios</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div id="test1" class="col S8 offset-s2">
+      <%= render 'description' %>
+    </div>
+    <div id="test2" class="col S8 offset-s2">
+
+      <% @house.services.each do |service|%>
+          <%= render 'services', :service => service %>
+      <% end %>
+
+    </div>
+    <div class="col s3 offset-s9">
+      <!--<br><br><br><br><br>-->
+      <ul>
+        <a class="btn-large waves-effect waves-light modal-trigger" href="#modal2">Reservar
+          <i class="material-icons right">send</i>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="col s9 center-block">
+
+</div>
+
+<div class="divider"></div>
+
+<div class="row">
+  <div class="col s1 offset-s1">
+    <h4>Comentarios:</h4>
+  </div>
+</div>
+<div class="row">
+  <div class="col s8 offset-s1">
+    <div class="divider"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col s1 offset-s1">
+      <i class="large material-icons">assignment_ind</i>
+    </div>
+    <div class="col s8 offset-s1 card">
+      <h5>user</h5><br>
+      <h6>Aqui va el comentario</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s1 offset-s1">
+      <i class="large material-icons">assignment_ind</i>
+    </div>
+    <div class="col s8 offset-s1 card">
+      <h5>user</h5><br>
+      <h6>Aqui va el comentario</h6>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s1 offset-s1">
+      <i class="large material-icons">assignment_ind</i>
+    </div>
+    <div class="col s8 offset-s1 card">
+      <h5>user</h5><br>
+      <h6>Aqui va el comentario</h6>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Structure -->
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <div class="row">
+      <h5>Datos Personales</h5><br>
+    </div>
+    <div class="row">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="Nombre y Apellidos" type="text" class="validate">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s6">
+            <select>
+              <option value="" disabled selected>Seleccione su pais</option>
+              <option value="1">EE.UU</option>
+              <option value="2">Canada</option>
+              <option value="3">Italia</option>
+              <option value="4">Francia</option>
+            </select>
+            <label>Pais</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+          <div class="input-field col s6">
+            <i class="material-icons prefix">phone</i>
+            <input id="icon_telephone" type="tel" class="validate">
+            <label for="icon_telephone">Telephone</label>
+          </div>
+        </div>
+        <div class="row">
+          <br><h5>Recervacion</h5>
+        </div>
+        <div class="row">
+          <div class="input-field col s1">
+            <br><h6>Desde</h6>
+          </div>
+          <div class="input-field col s4 center">
+            <input id="d_inicial" type="date" class="datepicker">
+          </div>
+          <div class="input-field col s1 offset-s1 center">
+            <br><h6>Hasta</h6>
+          </div>
+          <div class="input-field col s4 center">
+            <input type="date" class="datepicker" form="Dia Final">
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s1">
+            <br><h6>Cuartos </h6>
+          </div>
+          <div class="input-field col s4 offset-s1">
+            <form action="#">
+              <p class="range-field">
+                <input type="range" id="test5" min="1" max="4"/>
+              </p>
+            </form>
+          </div>
+          <div class="input-field col s1">
+            <br><h6>Personas </h6>
+          </div>
+          <div class="input-field col s4 offset-s1">
+            <form action="#">
+              <p class="range-field">
+                <input type="range" id="test5" min="1" max="9"/>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="row">
+          <form action="1" class="col s6">
+            <p>
+              <input type="checkbox" class="filled-in" id="aereo"/>
+              <label for="aereo">Recoger en el aereopuerto</label>
+            </p>
+          </form>
+        </div>
+        <div class="row">
+          <form action="2" class="col s6">
+            <p>
+              <input type="checkbox" class="filled-in" id="espec"/>
+              <label for="espec">Especificaciones</label>
+            </p>
+          </form>
+        </div>
+        <div class="row">
+          <form class="col s12">
+            <div class="row">
+              <div class="input-field col s12">
+                <textarea id="textarea1" class="materialize-textarea" placeholder="Escriba sus especificacione"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="row right"></div>
+  <div class="modal-footer">
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Enviar
+      <i class="material-icons small right">send</i>
+    </a>
+    <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Cancelar</a>
+  </div>
+</div>
+
+

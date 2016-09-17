@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  phone: 1
+  day_in: 2016-08-23
+  day_out: 2016-08-23
+  country: MyString
+  rooms: 1
+  persons: 1
+  airport_taxi: false
+  specifications: MyText
+
+two:
+  name: MyString
+  email: MyString
+  phone: 1
+  day_in: 2016-08-23
+  day_out: 2016-08-23
+  country: MyString
+  rooms: 1
+  persons: 1
+  airport_taxi: false
+  specifications: MyText
